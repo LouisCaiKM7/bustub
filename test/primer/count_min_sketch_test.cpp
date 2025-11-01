@@ -534,8 +534,8 @@ TEST(CountMinSketchTest, TopKDynamicTest) {
 
 TEST(CountMinSketchTest, TopKComprehensiveTest) {
   // Test comprehensive TopK functionality with parallel insertions and merging
-  const int width = random() % 200 + 100;
-  const int depth = random() % 8 + 8;
+  const int width = rand() % 200 + 100;
+  const int depth = rand() % 8 + 8;
   const int k = 5;
 
   auto cms1 = CountMinSketch<std::string>(width, depth);
